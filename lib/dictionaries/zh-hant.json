@@ -1,0 +1,103 @@
+{
+  "site": {
+    "name": "呂干華基金會",
+    "tagline": "獻給呂干華醫生的獨立紀念與知識網站"
+  },
+  "banner": {
+    "noFees": "本基金會不收取任何費用，亦不會要求支付；同時不提供任何資助或經費。",
+    "domain": "官方網址：lyuganhua.org"
+  },
+  "nav": {
+    "home": "首頁",
+    "life": "生平",
+    "news": "新聞",
+    "team": "團隊",
+    "about": "關於",
+    "legacy": "紀念",
+    "archives": "資料庫",
+    "participate": "參與",
+    "antiFraud": "防騙聲明",
+    "contact": "聯絡"
+  },
+  "home": {
+    "heroTitle": "以專業與仁心，延續呂干華醫生的初心",
+    "heroSubtitle": "非商業、零收費的紀念與檔案站。",
+    "ctaShare": "分享回憶",
+    "ctaOralHistory": "加入口述歷史",
+    "newsTitle": "新聞",
+    "more": "更多",
+    "mission": "以莊重與克制的方式，紀念其一生的醫者仁心。"
+  },
+  "about": {
+    "title": "關於基金會",
+    "body": "致力於保存呂干華醫生之遺產並傳播知識。我們完全獨立，從不收費或要求任何支付。"
+  },
+  "life": {
+    "title": "生平",
+    "intro": "生平大事年表。"
+  },
+  "legacy": {
+    "title": "紀念",
+    "intro": "精選致敬、影像與回憶投稿。"
+  },
+  "team": {
+    "title": "團隊",
+    "intro": "配合美國基金會慣例，公開披露主席及董事資料。",
+    "sections": {
+      "board": "董事會",
+      "officers": "行政團隊",
+      "advisors": "顧問"
+    },
+    "roles": {
+      "chair": "主席",
+      "viceChair": "副主席",
+      "director": "董事",
+      "executive": "行政總監",
+      "treasurer": "司庫",
+      "secretary": "秘書",
+      "advisor": "顧問"
+    },
+    "disclaimer": "以上為透明披露之初步名單；註冊及備案細節將於可用時公布。"
+  },
+  "archives": {
+    "title": "資料庫",
+    "intro": "論文、演講、訪談與媒體素材，附帶中英元資料與引用格式。"
+  },
+  "participate": {
+    "title": "參與",
+    "intro": "本頁重點介紹我們對社會之回饋——包括獎學金與醫療人才資助。全程不涉收費或任何形式之支付。",
+    "ctaContribute": "投稿回憶",
+    "ctaVolunteer": "義工報名",
+    "givingTitle": "社會回饋",
+    "scholarshipsTitle": "獎學金",
+    "scholarshipsDesc": "佔位：按需要/成績，面向相關學科學生之獎助計畫。",
+    "medTalentTitle": "醫療人才資助",
+    "medTalentDesc": "佔位：面向臨床醫生、住院醫/實習生、教育者之專項支援。",
+    "ctaLearnMore": "了解更多",
+    "ctaApply": "申請/查詢"
+  },
+  "antiFraud": {
+    "title": "防騙聲明",
+    "body": "我們從不收費、從不要求任何支付；亦不提供任何資助或補助。若有人聲稱相反，請提高警覺。",
+    "contact": "如有疑慮，請以官方網址 lyuganhua.org 與我們聯繫。"
+  },
+  "contact": {
+    "title": "聯絡",
+    "body": "透過官方網址聯繫我們。可在此放置媒體與投稿的專用電郵。",
+    "email": "contact@lyuganhua.org（示例）"
+  },
+  "pressKit": {
+    "title": "媒體素材包",
+    "intro": "標誌、簡介與精選圖片，提供媒體使用。"
+  },
+  "notFound": {
+    "title": "找不到頁面",
+    "body": "您請求的頁面不存在或已移除。",
+    "back": "返回首頁"
+  },
+  "footer": {
+    "rights": "在適用範圍內保留權利。敬請尊重隱私與引用規範。",
+    "noFees": "零收費・不索取付款・不提供資助",
+    "madeBy": "網站設計草案"
+  }
+}

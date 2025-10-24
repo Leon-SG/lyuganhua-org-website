@@ -1,0 +1,103 @@
+{
+  "site": {
+    "name": "Lü Ganhua Foundation",
+    "tagline": "An independent memorial and knowledge site honoring Dr. Lü Ganhua"
+  },
+  "banner": {
+    "noFees": "We do not charge fees or request payments of any kind. We also do not provide funding or grants.",
+    "domain": "Official domain: lyuganhua.org"
+  },
+  "nav": {
+    "home": "Home",
+    "life": "Life",
+    "news": "News",
+    "team": "Team",
+    "about": "About",
+    "legacy": "Legacy",
+    "archives": "Archives",
+    "participate": "Participate",
+    "antiFraud": "Anti-Fraud",
+    "contact": "Contact"
+  },
+  "home": {
+    "heroTitle": "Advancing care and compassion in memory of Dr. Lü Ganhua",
+    "heroSubtitle": "A non-commercial, fee-free memorial and archive.",
+    "ctaShare": "Share a memory",
+    "ctaOralHistory": "Join the Oral History",
+    "newsTitle": "News",
+    "more": "More",
+    "mission": "In remembrance, we honor a life of healing and dignity."
+  },
+  "about": {
+    "title": "About the Foundation",
+    "body": "Dedicated to preserving Dr. Lü Ganhua’s legacy and disseminating knowledge. We are fully independent and do not solicit or accept payments."
+  },
+  "life": {
+    "title": "Life",
+    "intro": "A timeline of milestones and key events."
+  },
+  "legacy": {
+    "title": "Memorial",
+    "intro": "Selected tributes, photos, and remembrance submissions."
+  },
+  "team": {
+    "title": "Team",
+    "intro": "In line with US foundation practices, we disclose officers and board members.",
+    "sections": {
+      "board": "Board of Directors",
+      "officers": "Officers",
+      "advisors": "Advisors"
+    },
+    "roles": {
+      "chair": "Chair",
+      "viceChair": "Vice Chair",
+      "director": "Director",
+      "executive": "Executive Director",
+      "treasurer": "Treasurer",
+      "secretary": "Secretary",
+      "advisor": "Advisor"
+    },
+    "disclaimer": "This is an initial listing for transparency. Registration and filing details to be published as they become available."
+  },
+  "archives": {
+    "title": "Archives",
+    "intro": "Publications, talks, interviews, and media materials with proper metadata and citation formats."
+  },
+  "participate": {
+    "title": "Participate",
+    "intro": "Our participation page highlights present-day contributions to society — scholarships and medical talent grants. No fees or payments involved.",
+    "ctaContribute": "Contribute a memory",
+    "ctaVolunteer": "Volunteer",
+    "givingTitle": "Giving Back",
+    "scholarshipsTitle": "Scholarships",
+    "scholarshipsDesc": "Placeholder: needs/merit-based awards to support students in relevant disciplines.",
+    "medTalentTitle": "Medical Talent Grants",
+    "medTalentDesc": "Placeholder: targeted support for clinicians, trainees, and educators.",
+    "ctaLearnMore": "Learn more",
+    "ctaApply": "Apply / Enquire"
+  },
+  "antiFraud": {
+    "title": "Anti-Fraud Statement",
+    "body": "We never charge fees and never request any payment. We do not provide funding or grants. Beware of any message claiming otherwise.",
+    "contact": "If in doubt, contact us via the official domain lyuganhua.org."
+  },
+  "contact": {
+    "title": "Contact",
+    "body": "Reach us at the official domain. Dedicated mailboxes for media and contributions can be added here.",
+    "email": "contact@lyuganhua.org (example)"
+  },
+  "pressKit": {
+    "title": "Press Kit",
+    "intro": "Logos, biography, and selected images for press use."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The requested page could not be found.",
+    "back": "Back to home"
+  },
+  "footer": {
+    "rights": "All rights reserved where applicable. Please respect privacy and attribution.",
+    "noFees": "No fees. No payments. No funding.",
+    "madeBy": "Site prototype"
+  }
+}

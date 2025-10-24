@@ -1,0 +1,103 @@
+{
+  "site": {
+    "name": "吕干华基金会",
+    "tagline": "献给吕干华医生的独立纪念与知识网站"
+  },
+  "banner": {
+    "noFees": "本基金会不收取任何费用，也不会要求支付；同时不提供任何资助或经费。",
+    "domain": "官方网站域名：lyuganhua.org"
+  },
+  "nav": {
+    "home": "首页",
+    "life": "生平",
+    "news": "新闻",
+    "team": "团队",
+    "about": "关于",
+    "legacy": "纪念",
+    "archives": "资料库",
+    "participate": "参与",
+    "antiFraud": "反诈声明",
+    "contact": "联系"
+  },
+  "home": {
+    "heroTitle": "以专业与仁心，延续吕干华医生的初心",
+    "heroSubtitle": "非商业、零收费的纪念与档案站。",
+    "ctaShare": "分享回忆",
+    "ctaOralHistory": "加入口述历史",
+    "newsTitle": "新闻",
+    "more": "更多",
+    "mission": "以庄重与克制的方式，纪念其一生的医者仁心。"
+  },
+  "about": {
+    "title": "关于基金会",
+    "body": "致力于保存吕干华医生的遗产并传播知识。我们完全独立，从不收费或要求任何支付。"
+  },
+  "life": {
+    "title": "生平",
+    "intro": "生平大事记时间轴。"
+  },
+  "legacy": {
+    "title": "纪念",
+    "intro": "精选致敬、影像与回忆投稿。"
+  },
+  "team": {
+    "title": "团队",
+    "intro": "按照美国基金会惯例，公开披露负责人与董事信息。",
+    "sections": {
+      "board": "董事会",
+      "officers": "执行团队",
+      "advisors": "顾问"
+    },
+    "roles": {
+      "chair": "主席",
+      "viceChair": "副主席",
+      "director": "董事",
+      "executive": "执行主任",
+      "treasurer": "财务",
+      "secretary": "秘书",
+      "advisor": "顾问"
+    },
+    "disclaimer": "上述为透明披露的初步名单；有关注册、备案等细节将在可用时公布。"
+  },
+  "archives": {
+    "title": "资料库",
+    "intro": "论文、演讲、采访与媒体素材，附带中英元数据与引用格式。"
+  },
+  "participate": {
+    "title": "参与",
+    "intro": "本页重点介绍我们对社会的回馈——包括奖学金与医疗人才资助。全流程不涉及任何费用或支付。",
+    "ctaContribute": "投稿回忆",
+    "ctaVolunteer": "志愿报名",
+    "givingTitle": "社会回馈",
+    "scholarshipsTitle": "奖学金",
+    "scholarshipsDesc": "占位：按需求/成绩，面向相关学科学生的奖助计划。",
+    "medTalentTitle": "医疗人才资助",
+    "medTalentDesc": "占位：面向临床医生、住院医/实习生、教育者的专项支持。",
+    "ctaLearnMore": "了解更多",
+    "ctaApply": "申请/咨询"
+  },
+  "antiFraud": {
+    "title": "反诈声明",
+    "body": "我们从不收费、从不要求任何支付；也不提供任何资助或补助。若有人声称相反，请务必提高警惕。",
+    "contact": "如有疑虑，请通过官方域名 lyuganhua.org 与我们联系。"
+  },
+  "contact": {
+    "title": "联系",
+    "body": "通过官方域名联系我们。可在此放置媒体与投稿的专用邮箱。",
+    "email": "contact@lyuganhua.org（示例）"
+  },
+  "pressKit": {
+    "title": "媒体素材包",
+    "intro": "标志、简介与精选图片，提供媒体使用。"
+  },
+  "notFound": {
+    "title": "未找到页面",
+    "body": "您请求的页面不存在或已移除。",
+    "back": "返回首页"
+  },
+  "footer": {
+    "rights": "在适用范围内保留权利。请尊重隐私与引用规范。",
+    "noFees": "零收费・不要求支付・不提供资助",
+    "madeBy": "网站原型"
+  }
+}
