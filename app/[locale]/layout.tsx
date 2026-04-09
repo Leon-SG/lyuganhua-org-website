@@ -39,6 +39,9 @@ export default async function LocaleLayout({
   const langAttr = toIetfLang(locale);
   const year = new Date().getFullYear();
 
+  const t = (zhh: string, zhs: string, en: string) =>
+    locale === "zh-hant" ? zhh : locale === "zh-hans" ? zhs : en;
+
   return (
     <html lang={langAttr}>
       <body>
@@ -60,9 +63,34 @@ export default async function LocaleLayout({
         </header>
         <StructuredData siteUrl="https://lyuganhua.org" />
         <main id="content" className="container">{children}</main>
+
+        {/* ── Enhanced Footer ── */}
         <footer className="footer">
-          <div className="container" style={{ textAlign: "center" }}>
-            <p className="muted">{dict.footer.rights} © {year} · {dict.site.name}</p>
+          <div className="footer-main">
+            <div className="footer-brand">
+              <h3>{dict.site.name}</h3>
+              <p>{dict.site.tagline}</p>
+              <p style={{ marginTop: 8, fontSize: "0.88rem" }}>{dict.footer.noFees}</p>
+            </div>
+            <div className="footer-col">
+              <h4>{t("快速連結", "快速链接", "Quick Links")}</h4>
+              <Link href={`/${locale}/about` as any}>{dict.nav.about}</Link>
+              <Link href={`/${locale}/life` as any}>{dict.nav.life}</Link>
+              <Link href={`/${locale}/legacy` as any}>{dict.nav.legacy}</Link>
+              <Link href={`/${locale}/news` as any}>{dict.nav.news}</Link>
+              <Link href={`/${locale}/archives` as any}>{dict.nav.archives}</Link>
+            </div>
+            <div className="footer-col">
+              <h4>{t("參與", "参与", "Get Involved")}</h4>
+              <Link href={`/${locale}/participate` as any}>{dict.nav.participate}</Link>
+              <Link href={`/${locale}/team` as any}>{dict.nav.team}</Link>
+              <Link href={`/${locale}/contact` as any}>{dict.nav.contact}</Link>
+              <Link href={`/${locale}/anti-fraud` as any}>{dict.nav.antiFraud}</Link>
+              <Link href={`/${locale}/press-kit` as any}>{t("媒體素材", "媒体素材", "Press Kit")}</Link>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p>{dict.footer.rights} &copy; {year} {dict.site.name}</p>
           </div>
         </footer>
       </body>

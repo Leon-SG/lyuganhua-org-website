@@ -20,29 +20,29 @@
     "contact": "Contact"
   },
   "home": {
-    "heroTitle": "Advancing care and compassion in memory of Dr. Lü Ganhua",
-    "heroSubtitle": "A non-commercial, fee-free memorial and archive.",
-    "ctaShare": "Share a memory",
+    "heroTitle": "Advancing Care and Compassion in Memory of Dr. Lü Ganhua",
+    "heroSubtitle": "A non-commercial, independent foundation dedicated to preserving medical wisdom and honoring a life of healing.",
+    "ctaShare": "Share a Memory",
     "ctaOralHistory": "Join the Oral History",
-    "newsTitle": "News",
+    "newsTitle": "Latest News",
     "more": "More",
     "mission": "In remembrance, we honor a life of healing and dignity."
   },
   "about": {
     "title": "About the Foundation",
-    "body": "Dedicated to preserving Dr. Lü Ganhua’s legacy and disseminating knowledge. We are fully independent and do not solicit or accept payments."
+    "body": "Dedicated to preserving Dr. Lü Ganhua's legacy through education, research archives, and the promotion of compassionate medicine — with full independence and transparency."
   },
   "life": {
-    "title": "Life",
-    "intro": "A timeline of milestones and key events."
+    "title": "Life & Milestones",
+    "intro": "Tracing the key moments that defined a remarkable career in medicine and service."
   },
   "legacy": {
-    "title": "Memorial",
-    "intro": "Selected tributes, photos, and remembrance submissions."
+    "title": "Memorial & Legacy",
+    "intro": "Selected tributes, photographs, and remembrance submissions honoring Dr. Lü Ganhua's enduring impact."
   },
   "team": {
-    "title": "Team",
-    "intro": "In line with US foundation practices, we disclose officers and board members.",
+    "title": "Leadership & Governance",
+    "intro": "In accordance with U.S. nonprofit foundation practices, we publicly disclose our officers, board members, and governance structure.",
     "sections": {
       "board": "Board of Directors",
       "officers": "Officers",
@@ -57,23 +57,23 @@
       "secretary": "Secretary",
       "advisor": "Advisor"
     },
-    "disclaimer": "This is an initial listing for transparency. Registration and filing details to be published as they become available."
+    "disclaimer": "This is an initial listing for transparency. Registration and filing details will be published as they become available."
   },
   "archives": {
-    "title": "Archives",
-    "intro": "Publications, talks, interviews, and media materials with proper metadata and citation formats."
+    "title": "Archives & Publications",
+    "intro": "A curated collection of publications, talks, interviews, and media materials — with proper metadata and citation formats for academic use."
   },
   "participate": {
-    "title": "Participate",
-    "intro": "Our participation page highlights present-day contributions to society — scholarships and medical talent grants. No fees or payments involved.",
-    "ctaContribute": "Contribute a memory",
+    "title": "Get Involved",
+    "intro": "Join us in honoring Dr. Lü Ganhua's legacy — through scholarships, medical talent grants, memory submissions, and the oral history project. No fees or payments involved.",
+    "ctaContribute": "Contribute a Memory",
     "ctaVolunteer": "Volunteer",
-    "givingTitle": "Giving Back",
+    "givingTitle": "Scholarships & Grants",
     "scholarshipsTitle": "Scholarships",
-    "scholarshipsDesc": "Placeholder: needs/merit-based awards to support students in relevant disciplines.",
+    "scholarshipsDesc": "Need and merit-based awards to support outstanding students in medical and related disciplines.",
     "medTalentTitle": "Medical Talent Grants",
-    "medTalentDesc": "Placeholder: targeted support for clinicians, trainees, and educators.",
-    "ctaLearnMore": "Learn more",
+    "medTalentDesc": "Targeted support for clinicians, trainees, and educators advancing patient-centered care.",
+    "ctaLearnMore": "Learn More",
     "ctaApply": "Apply / Enquire"
   },
   "antiFraud": {
@@ -82,8 +82,8 @@
     "contact": "If in doubt, contact us via the official domain lyuganhua.org."
   },
   "contact": {
-    "title": "Contact",
-    "body": "Reach us at the official domain. Dedicated mailboxes for media and contributions can be added here.",
+    "title": "Contact Us",
+    "body": "Reach out through our official channels for inquiries, media requests, or to participate in our projects.",
     "email": "contact@lyuganhua.org (example)"
   },
   "pressKit": {
@@ -91,9 +91,9 @@
     "intro": "Logos, biography, and selected images for press use."
   },
   "notFound": {
-    "title": "Page not found",
+    "title": "Page Not Found",
     "body": "The requested page could not be found.",
-    "back": "Back to home"
+    "back": "Back to Home"
   },
   "footer": {
     "rights": "All rights reserved where applicable. Please respect privacy and attribution.",
