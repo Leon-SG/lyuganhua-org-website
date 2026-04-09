@@ -23,28 +23,30 @@ export default async function NewsDetail({ params }: { params: { locale: string;
   const paras = item.body?.[locale] || item.body?.en || [];
 
   return (
-    <div className="section">
-      <div className="page-header">
-        <h1>{title}</h1>
-        <p className="lead" style={{ display: "flex", gap: 12, alignItems: "baseline" }}>
-          <span className="muted">{item.date}</span>
-        </p>
+    <div>
+      <div className="full-bleed section-cool" style={{ padding: "48px 0" }}>
+        <div className="container">
+          <p style={{ margin: "0 0 8px" }}>
+            <Link href={`/${locale}/news` as any} className="text-secondary">&larr; {dict.home.newsTitle}</Link>
+          </p>
+          <h1 style={{ margin: "0 0 8px" }}>{title}</h1>
+          <span className="tag">{item.date}</span>
+        </div>
       </div>
-      <article className="card" style={{ maxWidth: 920, margin: "0 auto" }}>
-        {paras.length > 0 ? (
-          <div style={{ display: "grid", gap: 12 }}>
-            {paras.map((p, i) => (
-              <p key={i} style={{ margin: 0 }}>{p}</p>
-            ))}
-          </div>
-        ) : (
-          <p className="muted" style={{ margin: 0 }}>Placeholder body. Content to be added.</p>
-        )}
-      </article>
-      <p className="muted" style={{ marginTop: 12 }}>
-        <Link href={`/${locale}/news` as any}>← {dict.home.newsTitle}</Link>
-      </p>
+
+      <div className="container section-lg">
+        <article className="card" style={{ maxWidth: 800, margin: "0 auto" }}>
+          {paras.length > 0 ? (
+            <div style={{ display: "grid", gap: 16 }}>
+              {paras.map((p, i) => (
+                <p key={i} style={{ margin: 0, lineHeight: 1.8 }}>{p}</p>
+              ))}
+            </div>
+          ) : (
+            <p className="text-secondary" style={{ margin: 0 }}>Placeholder body. Content to be added.</p>
+          )}
+        </article>
+      </div>
     </div>
   );
 }
-
