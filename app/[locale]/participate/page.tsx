@@ -135,8 +135,8 @@ export default async function Participate({ params }: { params: { locale: string
               </li>
             </ul>
             <div style={{ display: "flex", gap: 10, marginTop: 16 }}>
-              <a className="cta" href={`/${locale}/contact`}>{dict.participate.ctaApply}</a>
-              <a className="cta" href={`/${locale}/contact`} style={{ background: "transparent", color: "var(--brand)" }}>{dict.participate.ctaLearnMore}</a>
+              <a className="btn btn-primary" href={`/${locale}/contact`}>{dict.participate.ctaApply}</a>
+              <a className="btn btn-outline" href={`/${locale}/contact`}>{dict.participate.ctaLearnMore}</a>
             </div>
           </div>
           <div className="card">
@@ -166,8 +166,8 @@ export default async function Participate({ params }: { params: { locale: string
               </li>
             </ul>
             <div style={{ display: "flex", gap: 10, marginTop: 16 }}>
-              <a className="cta" href={`/${locale}/contact`}>{dict.participate.ctaApply}</a>
-              <a className="cta" href={`/${locale}/contact`} style={{ background: "transparent", color: "var(--brand)" }}>{dict.participate.ctaLearnMore}</a>
+              <a className="btn btn-primary" href={`/${locale}/contact`}>{dict.participate.ctaApply}</a>
+              <a className="btn btn-outline" href={`/${locale}/contact`}>{dict.participate.ctaLearnMore}</a>
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@ export default async function Participate({ params }: { params: { locale: string
               "If you have any questions or would like to learn more, please reach out through our official channels."
             )}
           </p>
-          <Link className="cta-outline" href={`/${locale}/contact` as any}>
+          <Link className="btn btn-outline" href={`/${locale}/contact` as any}>
             {dict.contact.title}
           </Link>
         </div>
