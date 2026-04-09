@@ -149,7 +149,24 @@ blockquote p{margin:0;font-style:italic;font-size:1.15rem;line-height:1.7}
 .hero-banner{min-height:420px}.hero-banner h1{font-size:2.2rem}.hero-banner-content{padding:48px 24px}
 .page-hero{min-height:220px}.page-hero h1{font-size:1.8rem}.page-hero-content{padding:40px 24px}
 .focus-grid,.stories-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr);gap:20px}.stat-item .stat-number{font-size:2.2rem}
-.footer-top,.footer-main{grid-template-columns:1fr;gap:28px;padding:40px 24px 28px}.footer-bottom{flex-direction:column;gap:8px;text-align:center}}
+.footer-top,.footer-main{grid-template-columns:1fr;gap:28px;padding:40px 24px 28px}.footer-bottom{flex-direction:column;gap:8px;text-align:center}
+.container{padding:0 16px}.card{padding:20px}.section-header{margin-bottom:32px}
+.btn,.cta,.cta-outline{padding:14px 24px;font-size:1rem;min-height:48px}
+.nav a{min-height:44px;display:flex;align-items:center}
+.mobile-link{min-height:48px;display:flex;align-items:center}
+.grid-2{gap:20px}.values-grid{grid-template-columns:1fr 1fr}
+blockquote{padding:20px 16px}blockquote p{font-size:1rem}
+.cta-banner{padding:56px 16px}.cta-banner h2{font-size:1.6rem}
+}
+/* Extra small screens */
+@media(max-width:480px){
+.hero-banner{min-height:360px}.hero-banner h1{font-size:1.75rem}.hero-banner .hero-subtitle{font-size:1.05rem}
+.page-hero{min-height:180px}.page-hero h1{font-size:1.5rem}
+.stats-grid{grid-template-columns:1fr 1fr;gap:16px}.stat-item .stat-number{font-size:1.8rem}
+.values-grid{grid-template-columns:1fr}
+.btn,.cta,.cta-outline{width:100%;justify-content:center}
+.hero-actions{flex-direction:column;width:100%}
+}
 /* Smooth fade-in for page sections */
 @keyframes fadeInUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
 .section-lg,.section,.container.section-lg{animation:fadeInUp .5s ease-out}
