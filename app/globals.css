@@ -14,7 +14,7 @@
 html{color-scheme:light;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.7}
 h1,h2,h3,h4{font-family:Georgia,"Noto Serif","Songti SC","Times New Roman",serif;color:var(--text);letter-spacing:-0.01em}
-h1{font-size:2.75rem;line-height:1.15;font-weight:700}h2{font-size:2rem;line-height:1.2;font-weight:700}h3{font-size:1.35rem;line-height:1.3;font-weight:600}
+h1{font-size:clamp(2rem,4vw,2.75rem);line-height:1.15;font-weight:700}h2{font-size:clamp(1.6rem,3vw,2rem);line-height:1.2;font-weight:700}h3{font-size:clamp(1.15rem,2vw,1.35rem);line-height:1.3;font-weight:600}
 html[lang^="zh-Hant"] body{font-family:-apple-system,"PingFang HK","Noto Sans HK","Microsoft JhengHei",sans-serif}
 html[lang^="zh-Hant"] h1,html[lang^="zh-Hant"] h2,html[lang^="zh-Hant"] h3,html[lang^="zh-Hant"] h4{font-family:"Noto Serif TC","PingFang HK",Georgia,serif}
 a{color:var(--brand);text-decoration:none;transition:color .15s}a:hover{text-decoration:underline;color:var(--brand-hover)}
@@ -48,13 +48,13 @@ img{max-width:100%;height:auto}
 .hero-banner{position:relative;min-height:560px;display:flex;align-items:center;background-size:cover;background-position:center;overflow:hidden}
 .hero-banner::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,26,46,.7) 0%,rgba(26,26,46,.4) 60%,rgba(140,21,21,.3) 100%)}
 .hero-banner-content{position:relative;z-index:2;max-width:var(--container);margin:0 auto;padding:80px 24px;width:100%}
-.hero-banner h1{color:#fff;font-size:3.2rem;margin:0 0 20px;max-width:700px;text-shadow:0 2px 20px rgba(0,0,0,.3)}
+.hero-banner h1{color:#fff;font-size:clamp(2.2rem,5vw,3.2rem);margin:0 0 20px;max-width:700px;text-shadow:0 2px 20px rgba(0,0,0,.3)}
 .hero-banner .hero-subtitle,.hero-banner>p{color:rgba(255,255,255,.92);font-size:1.25rem;line-height:1.6;margin:0 0 32px;max-width:580px}
 .hero-banner .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
 .page-hero{position:relative;min-height:300px;display:flex;align-items:center;background-size:cover;background-position:center;overflow:hidden}
 .page-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,26,46,.65),rgba(26,26,46,.45))}
 .page-hero-content{position:relative;z-index:2;max-width:var(--container);margin:0 auto;padding:64px 24px;width:100%}
-.page-hero h1{color:#fff;font-size:2.5rem;margin:0 0 12px;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.page-hero h1{color:#fff;font-size:clamp(1.8rem,4vw,2.5rem);margin:0 0 12px;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 .page-hero .hero-subtitle,.page-hero p,.page-hero .lead{color:rgba(255,255,255,.9);font-size:1.1rem;margin:0;max-width:600px}
 
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:4px;font-size:.95rem;font-weight:600;text-decoration:none;transition:all .2s;border:2px solid transparent}.btn:hover{text-decoration:none}
@@ -73,7 +73,7 @@ img{max-width:100%;height:auto}
 
 .stats-bar{padding:56px 0}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center;max-width:var(--container);margin:0 auto}
-.stat-item .stat-number{display:block;font-size:3rem;font-weight:700;font-family:Georgia,serif;line-height:1;color:var(--gold)}
+.stat-item .stat-number{display:block;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:700;font-family:Georgia,"Noto Serif",serif;line-height:1;color:var(--gold)}
 .stat-item .stat-label{display:block;margin-top:8px;font-size:.95rem;color:rgba(255,255,255,.85)}
 
 .focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
