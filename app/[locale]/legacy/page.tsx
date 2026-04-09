@@ -69,6 +69,26 @@ export default async function Legacy({ params }: { params: { locale: string } })
               )}
             </p>
           </article>
+          <article className="card">
+            <h3>{t("患者心聲", "患者心声", "A Patient's Voice")}</h3>
+            <p className="muted">
+              {t(
+                "\u5442\u91AB\u751F\u7E3D\u662F\u8010\u5FC3\u50BE\u807D\uFF0C\u8B93\u6211\u5728\u75C5\u75DB\u4E2D\u611F\u5230\u88AB\u5C0A\u91CD\u548C\u5B89\u5FC3\u3002\u4ED6\u4E0D\u50C5\u6CBB\u7642\u8EAB\u9AD4\uFF0C\u66F4\u6EAB\u6696\u4E86\u5FC3\u9748\u3002\uFF08\u5360\u4F4D\u6587\u5B57\uFF09",
+                "\u5415\u533B\u751F\u603B\u662F\u8010\u5FC3\u503E\u542C\uFF0C\u8BA9\u6211\u5728\u75C5\u75DB\u4E2D\u611F\u5230\u88AB\u5C0A\u91CD\u548C\u5B89\u5FC3\u3002\u4ED6\u4E0D\u4EC5\u6CBB\u7597\u8EAB\u4F53\uFF0C\u66F4\u6E29\u6696\u4E86\u5FC3\u7075\u3002\uFF08\u5360\u4F4D\u6587\u5B57\uFF09",
+                "Dr. L\u00FC always listened patiently, making me feel respected and reassured even in pain. He healed not just the body, but the spirit. (Placeholder text)"
+              )}
+            </p>
+          </article>
+          <article className="card">
+            <h3>{t("\u91AB\u5B78\u50B3\u627F", "\u533B\u5B66\u4F20\u627F", "Medical Heritage")}</h3>
+            <p className="muted">
+              {t(
+                "\u5442\u91AB\u751F\u7684\u81E8\u5E8A\u7D93\u9A57\u548C\u6559\u5B78\u65B9\u6CD5\u5DF2\u88AB\u591A\u4F4D\u5F8C\u8F29\u50B3\u627F\uFF0C\u5728\u65B0\u4E00\u4EE3\u91AB\u8005\u4E2D\u7E7C\u7E8C\u7572\u653E\u5149\u8292\u3002\uFF08\u5360\u4F4D\u6587\u5B57\uFF09",
+                "\u5415\u533B\u751F\u7684\u4E34\u5E8A\u7ECF\u9A8C\u548C\u6559\u5B66\u65B9\u6CD5\u5DF2\u88AB\u591A\u4F4D\u540E\u8F88\u4F20\u627F\uFF0C\u5728\u65B0\u4E00\u4EE3\u533B\u8005\u4E2D\u7EE7\u7EED\u7EFD\u653E\u5149\u8292\u3002\uFF08\u5360\u4F4D\u6587\u5B57\uFF09",
+                "Dr. L\u00FC's clinical experience and teaching methods have been carried forward by many prot\u00E9g\u00E9s, continuing to shine in the new generation of physicians. (Placeholder text)"
+              )}
+            </p>
+          </article>
         </div>
       </div>
 

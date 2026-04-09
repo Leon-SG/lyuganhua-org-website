@@ -14,28 +14,42 @@ export default async function NewsPage({ params }: { params: { locale: string } 
   const locale = isLocale(params.locale) ? params.locale : "en";
   const dict = await getDictionary(locale);
   const items = getNews(locale);
+
   return (
-    <div className="section">
-      <div className="page-header">
-        <h1>{dict.home.newsTitle}</h1>
+    <div>
+      <div
+        className="page-hero"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1504711434969-e33886168d6c?w=1920&q=80')",
+        }}
+      >
+        <div className="page-hero-content">
+          <h1>{dict.home.newsTitle}</h1>
+        </div>
       </div>
-      <div className="card" style={{ maxWidth: 920, margin: "0 auto" }}>
-        <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 10 }}>
+
+      <div className="section-lg">
+        <div style={{ maxWidth: 800, margin: "0 auto", display: "grid", gap: 20 }}>
           {items.map((n) => (
-            <li key={n.date} style={{ display: "flex", gap: 12, alignItems: "baseline" }}>
-              <span className="muted" style={{ minWidth: 110 }}>{n.date}</span>
-              {n.url ? (
-                <a href={n.url}>{n.title}</a>
-              ) : (
-                <Link href={`/${locale}/news/${n.slug}` as any}>{n.title}</Link>
+            <div key={n.slug} className="card">
+              <div style={{ display: "flex", gap: 16, alignItems: "baseline", flexWrap: "wrap" }}>
+                <span className="tag">{n.date}</span>
+                <h3 style={{ margin: 0, flex: 1 }}>
+                  {n.url ? (
+                    <a href={n.url}>{n.title}</a>
+                  ) : (
+                    <Link href={`/${locale}/news/${n.slug}` as any}>{n.title}</Link>
+                  )}
+                </h3>
+              </div>
+              {n.summary && (
+                <p className="muted" style={{ margin: "8px 0 0" }}>{n.summary}</p>
               )}
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
-      <p className="muted" style={{ marginTop: 12, textAlign: "center" }}>
-        <Link href={`/${locale}` as any}>{dict.nav.home}</Link>
-      </p>
     </div>
   );
 }

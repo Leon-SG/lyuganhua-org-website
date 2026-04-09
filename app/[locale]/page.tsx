@@ -137,17 +137,18 @@ export default async function Home({ params }: { params: { locale: string } }) {
           <h3>{dict.home.newsTitle}</h3>
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
             {topItems.map((n) => (
-              <li key={n.date} className="news-item">
-                <span className="muted" style={{ minWidth: 110, fontSize: "0.92rem" }}>
-                  {n.date}
-                </span>
-                {n.url ? (
-                  <a href={n.url}>{n.title}</a>
-                ) : (
-                  <Link href={`/${locale}/news/${n.slug}` as any}>
-                    {n.title}
-                  </Link>
-                )}
+              <li key={n.date} className="news-item" style={{ flexDirection: "column", gap: 4 }}>
+                <div style={{ display: "flex", gap: 12, alignItems: "baseline" }}>
+                  <span className="tag">{n.date}</span>
+                  {n.url ? (
+                    <a href={n.url} style={{ fontWeight: 600 }}>{n.title}</a>
+                  ) : (
+                    <Link href={`/${locale}/news/${n.slug}` as any} style={{ fontWeight: 600 }}>
+                      {n.title}
+                    </Link>
+                  )}
+                </div>
+                {n.summary && <p className="muted" style={{ margin: 0, paddingLeft: 0 }}>{n.summary}</p>}
               </li>
             ))}
           </ul>
