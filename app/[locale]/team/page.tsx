@@ -35,7 +35,7 @@ export default async function TeamPage({ params }: { params: { locale: string } 
       </div>
       <h3>{m.name}</h3>
       <p className="muted" style={{ margin: 0 }}>{roleLine(m)}</p>
-      {m.bio && <p className="muted">{localizeText(m.bio, locale)}</p>}
+      {m.bio && <p className="text-secondary">{localizeText(m.bio, locale)}</p>}
     </div>
   );
 
@@ -43,7 +43,7 @@ export default async function TeamPage({ params }: { params: { locale: string } 
     <div>
       {/* Hero */}
       <div
-        className="page-hero"
+        className="full-bleed page-hero"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&q=80')",
@@ -51,28 +51,50 @@ export default async function TeamPage({ params }: { params: { locale: string } 
       >
         <div className="page-hero-content">
           <h1>{dict.team.title}</h1>
-          <p>{dict.team.intro}</p>
+          <p className="hero-subtitle">{dict.team.intro}</p>
         </div>
       </div>
 
-      <div className="section-lg">
-        <section className="section">
-          <h2 style={{ marginTop: 0 }}>{dict.team.sections.board}</h2>
-          {chairs.length > 0 && (<div className="people-list-1" style={{ marginTop: 8 }}>{chairs.map(renderCard)}</div>)}
-          {viceChairs.length > 0 && (<div className="people-list-2" style={{ marginTop: 16 }}>{viceChairs.map(renderCard)}</div>)}
-          {directors.length > 0 && (<div className="people-list-2" style={{ marginTop: 16 }}>{directors.map(renderCard)}</div>)}
+      {/* Board of Directors */}
+      <div className="container section-lg">
+        <section>
+          <div className="section-header">
+            <h2>{dict.team.sections.board}</h2>
+            <span className="gold-line" />
+          </div>
+          {chairs.length > 0 && (
+            <div className="people-list-1">{chairs.map(renderCard)}</div>
+          )}
+          {viceChairs.length > 0 && (
+            <div className="people-list-2" style={{ marginTop: 24 }}>{viceChairs.map(renderCard)}</div>
+          )}
+          {directors.length > 0 && (
+            <div className="people-list-2" style={{ marginTop: 24 }}>{directors.map(renderCard)}</div>
+          )}
         </section>
-        <section className="section">
-          <h2 style={{ marginTop: 0 }}>{dict.team.sections.officers}</h2>
-          <div className="people-list-3" style={{ marginTop: 8 }}>{officers.map(renderCard)}</div>
+
+        {/* Officers */}
+        <section style={{ marginTop: 64 }}>
+          <div className="section-header">
+            <h2>{dict.team.sections.officers}</h2>
+            <span className="gold-line" />
+          </div>
+          <div className="people-list-3">{officers.map(renderCard)}</div>
         </section>
+
+        {/* Advisors */}
         {advisors.length > 0 && (
-          <section className="section">
-            <h2 style={{ marginTop: 0 }}>{dict.team.sections.advisors}</h2>
-            <div className="people-list-3" style={{ marginTop: 8 }}>{advisors.map(renderCard)}</div>
+          <section style={{ marginTop: 64 }}>
+            <div className="section-header">
+              <h2>{dict.team.sections.advisors}</h2>
+              <span className="gold-line" />
+            </div>
+            <div className="people-list-3">{advisors.map(renderCard)}</div>
           </section>
         )}
-        <section className="section">
+
+        {/* Disclaimer */}
+        <section style={{ marginTop: 64 }}>
           <blockquote>
             <p style={{ margin: 0 }}>{dict.team.disclaimer}</p>
           </blockquote>

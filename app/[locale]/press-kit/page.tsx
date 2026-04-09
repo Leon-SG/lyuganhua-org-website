@@ -18,8 +18,9 @@ export default async function PressKit({ params }: { params: { locale: string } 
 
   return (
     <div>
+      {/* Hero */}
       <div
-        className="page-hero"
+        className="full-bleed page-hero"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=1920&q=80')",
@@ -27,11 +28,24 @@ export default async function PressKit({ params }: { params: { locale: string } 
       >
         <div className="page-hero-content">
           <h1>{dict.pressKit.title}</h1>
-          <p>{dict.pressKit.intro}</p>
+          <p className="hero-subtitle">{dict.pressKit.intro}</p>
         </div>
       </div>
 
-      <div className="section-lg">
+      {/* Media Items */}
+      <div className="container section-lg">
+        <div className="section-header">
+          <h2>{t("\u53EF\u7528\u7D20\u6750", "\u53EF\u7528\u7D20\u6750", "Available Assets")}</h2>
+          <p className="text-secondary">
+            {t(
+              "\u4EE5\u4E0B\u7D20\u6750\u53EF\u4F9B\u5A92\u9AD4\u53CA\u516C\u958B\u5831\u5C0E\u4F7F\u7528",
+              "\u4EE5\u4E0B\u7D20\u6750\u53EF\u4F9B\u5A92\u4F53\u53CA\u516C\u5F00\u62A5\u9053\u4F7F\u7528",
+              "The following assets are available for press and media use"
+            )}
+          </p>
+          <span className="gold-line" />
+        </div>
+
         <div className="grid">
           {mediaItems.map((m) => (
             <div key={m.id} className="card">
@@ -43,37 +57,40 @@ export default async function PressKit({ params }: { params: { locale: string } 
               )}
               {m.credit && <p className="muted">{pick(m.credit, locale)}</p>}
               {m.usage && <p className="muted">{pick(m.usage, locale)}</p>}
-              <p>
-                <a className="cta" href={m.src} download>
-                  {t("下載", "下载", "Download")}
+              <div style={{ marginTop: 12 }}>
+                <a className="btn btn-primary" href={m.src} download>
+                  {t("\u4E0B\u8F09", "\u4E0B\u8F7D", "Download")}
                 </a>
-              </p>
+              </div>
             </div>
           ))}
         </div>
+      </div>
 
-        <div className="section-alt-bg" style={{ marginTop: 48 }}>
-          <div className="section-alt-inner">
-            <h2 style={{ textAlign: "center", marginTop: 0, marginBottom: 16 }}>
-              {t("使用指南", "使用指南", "Usage Guidelines")}
-            </h2>
-            <div className="grid-2">
-              <div className="card">
-                <h3>{t("標誌使用", "标志使用", "Logo Usage")}</h3>
-                <ul style={{ display: "grid", gap: 8 }}>
-                  <li>{t("請保持標誌完整，不得裁切或變形", "请保持标志完整，不得裁切或变形", "Keep the logo intact; do not crop or distort")}</li>
-                  <li>{t("標誌周圍保留適當留白", "标志周围保留适当留白", "Maintain adequate clear space around the logo")}</li>
-                  <li>{t("深色背景上使用白色版本", "深色背景上使用白色版本", "Use the white version on dark backgrounds")}</li>
-                </ul>
-              </div>
-              <div className="card">
-                <h3>{t("引用規範", "引用规范", "Attribution")}</h3>
-                <ul style={{ display: "grid", gap: 8 }}>
-                  <li>{t("使用時請註明出處", "使用时请注明出处", "Please credit the Foundation when using materials")}</li>
-                  <li>{t("不得用於商業或募款用途", "不得用于商业或募款用途", "May not be used for commercial or fundraising purposes")}</li>
-                  <li>{t("如需高分辨率文件，請通過官方郵箱聯繫", "如需高分辨率文件，请通过官方邮箱联系", "Contact us via official email for high-resolution files")}</li>
-                </ul>
-              </div>
+      {/* Usage Guidelines */}
+      <div className="full-bleed section-warm" style={{ padding: "var(--section-gap, 64px) 0" }}>
+        <div className="container">
+          <div className="section-header">
+            <h2>{t("\u4F7F\u7528\u6307\u5357", "\u4F7F\u7528\u6307\u5357", "Usage Guidelines")}</h2>
+            <span className="gold-line" />
+          </div>
+
+          <div className="grid-2">
+            <div className="card">
+              <h3>{t("\u6A19\u8A8C\u4F7F\u7528", "\u6807\u5FD7\u4F7F\u7528", "Logo Usage")}</h3>
+              <ul style={{ display: "grid", gap: 8 }}>
+                <li>{t("\u8ACB\u4FDD\u6301\u6A19\u8A8C\u5B8C\u6574\uFF0C\u4E0D\u5F97\u88C1\u5207\u6216\u8B8A\u5F62", "\u8BF7\u4FDD\u6301\u6807\u5FD7\u5B8C\u6574\uFF0C\u4E0D\u5F97\u88C1\u5207\u6216\u53D8\u5F62", "Keep the logo intact; do not crop or distort")}</li>
+                <li>{t("\u6A19\u8A8C\u5468\u570D\u4FDD\u7559\u9069\u7576\u7559\u767D", "\u6807\u5FD7\u5468\u56F4\u4FDD\u7559\u9002\u5F53\u7559\u767D", "Maintain adequate clear space around the logo")}</li>
+                <li>{t("\u6DF1\u8272\u80CC\u666F\u4E0A\u4F7F\u7528\u767D\u8272\u7248\u672C", "\u6DF1\u8272\u80CC\u666F\u4E0A\u4F7F\u7528\u767D\u8272\u7248\u672C", "Use the white version on dark backgrounds")}</li>
+              </ul>
+            </div>
+            <div className="card">
+              <h3>{t("\u5F15\u7528\u898F\u7BC4", "\u5F15\u7528\u89C4\u8303", "Attribution")}</h3>
+              <ul style={{ display: "grid", gap: 8 }}>
+                <li>{t("\u4F7F\u7528\u6642\u8ACB\u8A3B\u660E\u51FA\u8655", "\u4F7F\u7528\u65F6\u8BF7\u6CE8\u660E\u51FA\u5904", "Please credit the Foundation when using materials")}</li>
+                <li>{t("\u4E0D\u5F97\u7528\u65BC\u5546\u696D\u6216\u52DF\u6B3E\u7528\u9014", "\u4E0D\u5F97\u7528\u4E8E\u5546\u4E1A\u6216\u52DF\u6B3E\u7528\u9014", "May not be used for commercial or fundraising purposes")}</li>
+                <li>{t("\u5982\u9700\u9AD8\u5206\u8FA8\u7387\u6587\u4EF6\uFF0C\u8ACB\u901A\u904E\u5B98\u65B9\u90F5\u7BB1\u806F\u7E6B", "\u5982\u9700\u9AD8\u5206\u8FA8\u7387\u6587\u4EF6\uFF0C\u8BF7\u901A\u8FC7\u5B98\u65B9\u90AE\u7BB1\u8054\u7CFB", "Contact us via official email for high-resolution files")}</li>
+              </ul>
             </div>
           </div>
         </div>

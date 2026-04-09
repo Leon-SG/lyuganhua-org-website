@@ -6,190 +6,107 @@ import { getNews } from "@/data/news";
 export default async function Home({ params }: { params: { locale: string } }) {
   const locale = isLocale(params.locale) ? params.locale : "en";
   const dict = await getDictionary(locale);
-
   const items = getNews(locale);
-  const topItems = items.slice(0, 3);
-
+  const topItems = items.slice(0, 4);
   const t = (zhh: string, zhs: string, en: string) =>
     locale === "zh-hant" ? zhh : locale === "zh-hans" ? zhs : en;
 
   return (
     <div>
-      {/* ── Hero Banner ── */}
-      <div
-        className="hero-banner"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')",
-        }}
-      >
+      <div className="hero-banner full-bleed" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')" }}>
         <div className="hero-banner-content">
           <h1>{dict.home.heroTitle}</h1>
-          <p>{dict.home.heroSubtitle}</p>
+          <p className="hero-subtitle">{dict.home.heroSubtitle}</p>
           <div className="hero-actions">
-            <Link className="cta" href={`/${locale}/legacy` as any}>
-              {dict.home.ctaShare}
-            </Link>
-            <Link
-              className="cta-outline"
-              href={`/${locale}/about` as any}
-            >
-              {t("了解更多", "了解更多", "Learn More")}
-            </Link>
+            <Link className="btn btn-white" href={`/${locale}/about` as any}>{t("\u4E86\u89E3\u57FA\u91D1\u6703", "\u4E86\u89E3\u57FA\u91D1\u4F1A", "About the Foundation")}</Link>
+            <Link className="btn btn-outline" href={`/${locale}/participate` as any}>{t("\u53C3\u8207\u6211\u5011", "\u53C2\u4E0E\u6211\u4EEC", "Get Involved")}</Link>
           </div>
         </div>
       </div>
 
-      {/* ── Impact Stats ── */}
-      <div className="stats-section">
-        <div className="stats-grid">
-          <div className="stat-item">
-            <span className="stat-number">30+</span>
-            <span className="stat-label">
-              {t("年醫學貢獻", "年医学贡献", "Years of Medical Service")}
-            </span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">500+</span>
-            <span className="stat-label">
-              {t("指導學生", "指导学生", "Students Mentored")}
-            </span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">100+</span>
-            <span className="stat-label">
-              {t("研究論文", "研究论文", "Research Publications")}
-            </span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">{t("無限", "无限", "Lasting")}</span>
-            <span className="stat-label">
-              {t("醫者仁心的傳承", "医者仁心的传承", "Legacy of Compassion")}
-            </span>
+      <div className="full-bleed section-brand stats-bar">
+        <div className="container">
+          <div className="stats-grid">
+            <div className="stat-item"><span className="stat-number">30+</span><span className="stat-label">{t("\u5E74\u91AB\u5B78\u670D\u52D9", "\u5E74\u533B\u5B66\u670D\u52A1", "Years of Medical Service")}</span></div>
+            <div className="stat-item"><span className="stat-number">500+</span><span className="stat-label">{t("\u6307\u5C0E\u5B78\u751F", "\u6307\u5BFC\u5B66\u751F", "Students Mentored")}</span></div>
+            <div className="stat-item"><span className="stat-number">100+</span><span className="stat-label">{t("\u7814\u7A76\u8AD6\u6587", "\u7814\u7A76\u8BBA\u6587", "Research Publications")}</span></div>
+            <div className="stat-item"><span className="stat-number">{t("\u7121\u9650", "\u65E0\u9650", "Lasting")}</span><span className="stat-label">{t("\u91AB\u8005\u4EC1\u5FC3\u7684\u50B3\u627F", "\u533B\u8005\u4EC1\u5FC3\u7684\u4F20\u627F", "Legacy of Compassion")}</span></div>
           </div>
         </div>
       </div>
 
-      {/* ── Mission / Pillars ── */}
-      <div className="mission-section">
-        <div className="mission-inner">
-          <h2>{t("我們的使命", "我们的使命", "Our Mission")}</h2>
-          <p className="lead">
-            {t(
-              "以莊重、獨立與透明的方式，保存呂干華醫生的醫學遺產，促進醫學教育與人文精神的傳承。",
-              "以庄重、独立与透明的方式，保存吕干华医生的医学遗产，促进医学教育与人文精神的传承。",
-              "To honor and preserve the medical legacy of Dr. Lü Ganhua through education, research, and compassionate service — with full independence and transparency."
-            )}
-          </p>
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon" aria-hidden="true">
-                <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+      <div className="full-bleed section-warm" style={{ padding: "var(--section-gap) 0" }}>
+        <div className="container">
+          <div className="section-header">
+            <h2>{t("\u6211\u5011\u7684\u4F7F\u547D", "\u6211\u4EEC\u7684\u4F7F\u547D", "Our Mission")}</h2>
+            <p>{t("\u4EE5\u83AB\u91CD\u3001\u7368\u7ACB\u8207\u900F\u660E\u7684\u65B9\u5F0F\uFF0C\u4FDD\u5B58\u5442\u5E72\u83EF\u91AB\u751F\u7684\u91AB\u5B78\u907A\u7522\uFF0C\u4FC3\u9032\u91AB\u5B78\u6559\u80B2\u8207\u4EBA\u6587\u7CBE\u795E\u7684\u50B3\u627F\u3002", "\u4EE5\u5E84\u91CD\u3001\u72EC\u7ACB\u4E0E\u900F\u660E\u7684\u65B9\u5F0F\uFF0C\u4FDD\u5B58\u5415\u5E72\u534E\u533B\u751F\u7684\u533B\u5B66\u9057\u4EA7\uFF0C\u4FC3\u8FDB\u533B\u5B66\u6559\u80B2\u4E0E\u4EBA\u6587\u7CBE\u795E\u7684\u4F20\u627F\u3002", "To honor and preserve the medical legacy of Dr. L\u00FC Ganhua through education, research, and compassionate service \u2014 with full independence and transparency.")}</p>
+            <span className="gold-line" />
+          </div>
+          <div className="focus-grid">
+            <div className="focus-card">
+              <div className="focus-card-img" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80')" }} />
+              <div className="focus-card-body">
+                <h3>{t("\u77E5\u8B58\u4FDD\u5B58\u8207\u6A94\u6848", "\u77E5\u8BC6\u4FDD\u5B58\u4E0E\u6863\u6848", "Knowledge Preservation")}</h3>
+                <p>{t("\u7CFB\u7D71\u6574\u7406\u548C\u4FDD\u5B58\u5442\u5E72\u83EF\u91AB\u751F\u7684\u5B78\u8853\u8AD6\u6587\u3001\u81E8\u5E8A\u7814\u7A76\u548C\u6559\u5B78\u8CC7\u6599\uFF0C\u5EFA\u7ACB\u53EF\u4F9B\u516C\u773E\u67E5\u95B1\u7684\u6578\u4F4D\u6A94\u6848\u3002", "\u7CFB\u7EDF\u6574\u7406\u548C\u4FDD\u5B58\u5415\u5E72\u534E\u533B\u751F\u7684\u5B66\u672F\u8BBA\u6587\u3001\u4E34\u5E8A\u7814\u7A76\u548C\u6559\u5B66\u8D44\u6599\uFF0C\u5EFA\u7ACB\u53EF\u4F9B\u516C\u4F17\u67E5\u9605\u7684\u6570\u5B57\u6863\u6848\u3002", "Systematically preserving Dr. L\u00FC's academic papers, clinical research, and teaching materials in a publicly accessible digital archive.")}</p>
               </div>
-              <h3>{t("知識保存", "知识保存", "Knowledge Preservation")}</h3>
-              <p>
-                {t(
-                  "系統整理和保存呂干華醫生的學術論文、臨床研究和教學資料，建立可供公眾查閱的數位檔案。",
-                  "系统整理和保存吕干华医生的学术论文、临床研究和教学资料，建立可供公众查阅的数字档案。",
-                  "Systematically organizing and preserving Dr. Lü's academic papers, clinical research, and teaching materials in a publicly accessible digital archive."
-                )}
-              </p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon" aria-hidden="true">
-                <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+            <div className="focus-card">
+              <div className="focus-card-img" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80')" }} />
+              <div className="focus-card-body">
+                <h3>{t("\u4EBA\u624D\u57F9\u80B2\u8207\u734E\u5B78\u91D1", "\u4EBA\u624D\u57F9\u80B2\u4E0E\u5956\u5B66\u91D1", "Talent Development & Scholarships")}</h3>
+                <p>{t("\u900F\u904E\u734E\u5B78\u91D1\u548C\u91AB\u7642\u4EBA\u624D\u8CC7\u52A9\u8A08\u756B\uFF0C\u652F\u6301\u65B0\u4E00\u4EE3\u91AB\u5B78\u5C08\u696D\u4EBA\u624D\u7684\u57F9\u990A\u8207\u767C\u5C55\u3002", "\u901A\u8FC7\u5956\u5B66\u91D1\u548C\u533B\u7597\u4EBA\u624D\u8D44\u52A9\u8BA1\u5212\uFF0C\u652F\u6301\u65B0\u4E00\u4EE3\u533B\u5B66\u4E13\u4E1A\u4EBA\u624D\u7684\u57F9\u517B\u4E0E\u53D1\u5C55\u3002", "Supporting the next generation of medical professionals through scholarships and talent development grants.")}</p>
               </div>
-              <h3>{t("人才培育", "人才培育", "Talent Development")}</h3>
-              <p>
-                {t(
-                  "透過獎學金和醫療人才資助計畫，支持新一代醫學專業人才的培養與發展。",
-                  "通过奖学金和医疗人才资助计划，支持新一代医学专业人才的培养与发展。",
-                  "Supporting the next generation of medical professionals through scholarships and talent development grants."
-                )}
-              </p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon" aria-hidden="true">
-                <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="var(--brand)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+            <div className="focus-card">
+              <div className="focus-card-img" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=800&q=80')" }} />
+              <div className="focus-card-body">
+                <h3>{t("\u4EC1\u5FC3\u50B3\u627F\u8207\u53E3\u8FF0\u6B77\u53F2", "\u4EC1\u5FC3\u4F20\u627F\u4E0E\u53E3\u8FF0\u5386\u53F2", "Compassion & Oral History")}</h3>
+                <p>{t("\u6536\u96C6\u540C\u4E8B\u3001\u5B78\u751F\u53CA\u60A3\u8005\u7684\u56DE\u61B6\u8207\u898B\u8B49\uFF0C\u4EE5\u591A\u5143\u89D2\u5EA6\u5B8C\u6574\u5448\u73FE\u5442\u91AB\u751F\u7684\u91AB\u8005\u98A8\u7BC4\u3002", "\u6536\u96C6\u540C\u4E8B\u3001\u5B66\u751F\u53CA\u60A3\u8005\u7684\u56DE\u5FC6\u4E0E\u89C1\u8BC1\uFF0C\u4EE5\u591A\u5143\u89D2\u5EA6\u5B8C\u6574\u5448\u73B0\u5415\u533B\u751F\u7684\u533B\u8005\u98CE\u8303\u3002", "Collecting memories and testimonials from colleagues, students, and patients, presenting Dr. L\u00FC's legacy from multiple perspectives.")}</p>
               </div>
-              <h3>{t("仁心傳承", "仁心传承", "Compassion & Legacy")}</h3>
-              <p>
-                {t(
-                  "收集和分享關於呂干華醫生仁心仁術的故事，讓醫者精神薪火相傳。",
-                  "收集和分享关于吕干华医生仁心仁术的故事，让医者精神薪火相传。",
-                  "Collecting and sharing stories of Dr. Lü's compassionate care, ensuring his spirit of healing endures for generations."
-                )}
-              </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* ── Latest News ── */}
-      <div className="section-lg">
-        <div className="news-list-card">
-          <h3>{dict.home.newsTitle}</h3>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-            {topItems.map((n) => (
-              <li key={n.date} className="news-item" style={{ flexDirection: "column", gap: 4 }}>
-                <div style={{ display: "flex", gap: 12, alignItems: "baseline" }}>
-                  <span className="tag">{n.date}</span>
-                  {n.url ? (
-                    <a href={n.url} style={{ fontWeight: 600 }}>{n.title}</a>
-                  ) : (
-                    <Link href={`/${locale}/news/${n.slug}` as any} style={{ fontWeight: 600 }}>
-                      {n.title}
-                    </Link>
-                  )}
-                </div>
-                {n.summary && <p className="muted" style={{ margin: 0, paddingLeft: 0 }}>{n.summary}</p>}
-              </li>
-            ))}
-          </ul>
-          <div style={{ marginTop: 20 }}>
-            <Link className="cta" href={`/${locale}/news` as any}>
-              {t("查看全部新聞", "查看全部新闻", "View All News")}
-            </Link>
-          </div>
+      <div className="container" style={{ padding: "var(--section-gap) 24px" }}>
+        <div className="section-header">
+          <h2>{dict.home.newsTitle}</h2>
+          <p>{t("\u57FA\u91D1\u6703\u6700\u65B0\u52D5\u614B\u8207\u9032\u5C55", "\u57FA\u91D1\u4F1A\u6700\u65B0\u52A8\u6001\u4E0E\u8FDB\u5C55", "The latest updates and developments from the Foundation")}</p>
+          <span className="gold-line" />
+        </div>
+        <div className="stories-grid">
+          {topItems.map((n) => (
+            <article key={n.slug} className="story-card">
+              <div className="story-card-body">
+                <span className="tag">{n.date}</span>
+                <h3>{n.url ? <a href={n.url}>{n.title}</a> : <Link href={`/${locale}/news/${n.slug}` as any}>{n.title}</Link>}</h3>
+                {n.summary && <p>{n.summary}</p>}
+              </div>
+            </article>
+          ))}
+        </div>
+        <div style={{ textAlign: "center", marginTop: 40 }}>
+          <Link className="btn btn-ghost" href={`/${locale}/news` as any}>{t("\u67E5\u770B\u5168\u90E8\u65B0\u805E", "\u67E5\u770B\u5168\u90E8\u65B0\u95FB", "View All News")} &rarr;</Link>
         </div>
       </div>
 
-      {/* ── CTA Banner ── */}
-      <div
-        className="cta-banner"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80')",
-        }}
-      >
+      <div className="full-bleed section-cool" style={{ padding: "64px 0" }}>
+        <div className="container-narrow" style={{ textAlign: "center" }}>
+          <blockquote style={{ border: "none", background: "transparent", padding: 0 }}>
+            <p style={{ fontSize: "1.4rem", fontStyle: "italic", lineHeight: 1.6 }}>
+              {t("\u300C\u91AB\u8005\u4E4B\u9053\uFF0C\u5728\u65BC\u4EE5\u4EC1\u5FC3\u5F85\u4EBA\uFF0C\u4EE5\u5C08\u696D\u6FDF\u4E16\u3002\u4E0D\u6C42\u805E\u9054\uFF0C\u4F46\u6C42\u7121\u6127\u65BC\u5FC3\u3002\u300D", "\u201C\u533B\u8005\u4E4B\u9053\uFF0C\u5728\u4E8E\u4EE5\u4EC1\u5FC3\u5F85\u4EBA\uFF0C\u4EE5\u4E13\u4E1A\u6D4E\u4E16\u3002\u4E0D\u6C42\u95FB\u8FBE\uFF0C\u4F46\u6C42\u65E0\u6127\u4E8E\u5FC3\u3002\u201D", "The way of medicine lies in treating others with compassion and serving the world with expertise. Seek not fame, but only peace of conscience.")}
+            </p>
+          </blockquote>
+        </div>
+      </div>
+
+      <div className="full-bleed cta-banner" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80')" }}>
         <div className="cta-banner-content">
-          <h2>
-            {t(
-              "加入我們，傳承醫者仁心",
-              "加入我们，传承医者仁心",
-              "Join Us in Honoring a Legacy of Healing"
-            )}
-          </h2>
-          <p>
-            {t(
-              "無論是分享回憶、參與口述歷史，還是了解獎學金計畫——您的參與讓這份遺產更加豐富。",
-              "无论是分享回忆、参与口述历史，还是了解奖学金计划——您的参与让这份遗产更加丰富。",
-              "Whether sharing a memory, joining the oral history project, or learning about our scholarship programs — your participation enriches this legacy."
-            )}
-          </p>
+          <h2>{t("\u52A0\u5165\u6211\u5011\uFF0C\u50B3\u627F\u91AB\u8005\u4EC1\u5FC3", "\u52A0\u5165\u6211\u4EEC\uFF0C\u4F20\u627F\u533B\u8005\u4EC1\u5FC3", "Join Us in Honoring a Legacy of Healing")}</h2>
+          <p>{t("\u7121\u8AD6\u662F\u5206\u4EAB\u56DE\u61B6\u3001\u53C3\u8207\u53E3\u8FF0\u6B77\u53F2\uFF0C\u9084\u662F\u4E86\u89E3\u734E\u5B78\u91D1\u8A08\u756B\u2014\u2014\u60A8\u7684\u53C3\u8207\u8B93\u9019\u4EFD\u907A\u7522\u66F4\u52A0\u8C50\u5BCC\u3002", "\u65E0\u8BBA\u662F\u5206\u4EAB\u56DE\u5FC6\u3001\u53C2\u4E0E\u53E3\u8FF0\u5386\u53F2\uFF0C\u8FD8\u662F\u4E86\u89E3\u5956\u5B66\u91D1\u8BA1\u5212\u2014\u2014\u60A8\u7684\u53C2\u4E0E\u8BA9\u8FD9\u4EFD\u9057\u4EA7\u66F4\u52A0\u4E30\u5BCC\u3002", "Whether sharing a memory, joining our oral history project, or learning about scholarship programs \u2014 your participation enriches this legacy.")}</p>
           <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link className="cta-outline" href={`/${locale}/participate` as any}>
-              {dict.participate.title}
-            </Link>
-            <Link className="cta-outline" href={`/${locale}/contact` as any}>
-              {dict.contact.title}
-            </Link>
+            <Link className="btn btn-white" href={`/${locale}/participate` as any}>{dict.participate.title}</Link>
+            <Link className="btn btn-outline" href={`/${locale}/contact` as any}>{dict.contact.title}</Link>
           </div>
         </div>
       </div>
