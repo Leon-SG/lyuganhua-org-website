@@ -18,7 +18,7 @@ export default async function Participate({ params }: { params: { locale: string
     <div>
       {/* Hero */}
       <div
-        className="page-hero"
+        className="full-bleed page-hero"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1920&q=80')",
@@ -31,17 +31,18 @@ export default async function Participate({ params }: { params: { locale: string
       </div>
 
       {/* Ways to Participate */}
-      <div className="section-lg">
-        <h2 style={{ marginTop: 0, textAlign: "center", marginBottom: 12 }}>
-          {t("參與方式", "参与方式", "Ways to Participate")}
-        </h2>
-        <p className="muted" style={{ textAlign: "center", marginBottom: 40, maxWidth: 600, marginLeft: "auto", marginRight: "auto" }}>
-          {t(
-            "我們提供多種方式讓您參與紀念和傳承呂干華醫生的精神遺產。所有參與均為自願且完全免費。",
-            "我们提供多种方式让您参与纪念和传承吕干华医生的精神遗产。所有参与均为自愿且完全免费。",
-            "We offer multiple ways for you to participate in commemorating and carrying forward Dr. Lü Ganhua's legacy. All participation is voluntary and completely free."
-          )}
-        </p>
+      <div className="container section-lg">
+        <div className="section-header">
+          <h2>{t("參與方式", "参与方式", "Ways to Participate")}</h2>
+          <p className="text-secondary">
+            {t(
+              "我們提供多種方式讓您參與紀念和傳承呂干華醫生的精神遺產。所有參與均為自願且完全免費。",
+              "我们提供多种方式让您参与纪念和传承吕干华医生的精神遗产。所有参与均为自愿且完全免费。",
+              "We offer multiple ways for you to participate in commemorating and carrying forward Dr. Lü Ganhua's legacy. All participation is voluntary and completely free."
+            )}
+          </p>
+          <span className="gold-line" />
+        </div>
         <div className="features-grid">
           <div className="feature-card">
             <div className="feature-icon" aria-hidden="true">
@@ -97,9 +98,9 @@ export default async function Participate({ params }: { params: { locale: string
       <hr className="section-divider" />
 
       {/* Scholarships & Grants */}
-      <div className="section-lg">
+      <div className="container section-lg">
         <h2 style={{ marginTop: 0 }}>{dict.participate.givingTitle}</h2>
-        <p className="muted" style={{ marginBottom: 24 }}>
+        <p className="text-secondary" style={{ marginBottom: 24 }}>
           {t(
             "以下計畫旨在以呂干華醫生之名回饋社會，培養新一代醫學人才。",
             "以下计划旨在以吕干华医生之名回馈社会，培养新一代医学人才。",
@@ -109,7 +110,7 @@ export default async function Participate({ params }: { params: { locale: string
         <div className="grid-2">
           <div className="card">
             <h3>{dict.participate.scholarshipsTitle}</h3>
-            <p className="muted">{dict.participate.scholarshipsDesc}</p>
+            <p className="text-secondary">{dict.participate.scholarshipsDesc}</p>
             <ul className="list-plain" style={{ marginTop: 12, display: "grid", gap: 8 }}>
               <li>
                 {t(
@@ -140,7 +141,7 @@ export default async function Participate({ params }: { params: { locale: string
           </div>
           <div className="card">
             <h3>{dict.participate.medTalentTitle}</h3>
-            <p className="muted">{dict.participate.medTalentDesc}</p>
+            <p className="text-secondary">{dict.participate.medTalentDesc}</p>
             <ul className="list-plain" style={{ marginTop: 12, display: "grid", gap: 8 }}>
               <li>
                 {t(
@@ -174,7 +175,7 @@ export default async function Participate({ params }: { params: { locale: string
 
       {/* CTA */}
       <div
-        className="cta-banner"
+        className="full-bleed cta-banner"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80')",

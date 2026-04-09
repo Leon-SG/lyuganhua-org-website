@@ -18,7 +18,7 @@ export default async function About({ params }: { params: { locale: string } }) 
     <div>
       {/* Hero */}
       <div
-        className="page-hero"
+        className="full-bleed page-hero"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80')",
@@ -31,10 +31,11 @@ export default async function About({ params }: { params: { locale: string } }) 
       </div>
 
       {/* Mission */}
-      <div className="section-lg">
-        <h2 style={{ marginTop: 0 }}>
-          {t("基金會宗旨", "基金会宗旨", "Foundation Purpose")}
-        </h2>
+      <div className="container section-lg">
+        <div className="section-header">
+          <h2>{t("基金會宗旨", "基金会宗旨", "Foundation Purpose")}</h2>
+          <span className="gold-line" />
+        </div>
         <div className="grid-2" style={{ marginTop: 16 }}>
           <div>
             <p>
@@ -72,11 +73,12 @@ export default async function About({ params }: { params: { locale: string } }) 
       </div>
 
       {/* Core Values */}
-      <div className="section-alt-bg">
-        <div className="section-alt-inner">
-          <h2 style={{ textAlign: "center", marginTop: 0, marginBottom: 32 }}>
-            {t("核心價值", "核心价值", "Core Values")}
-          </h2>
+      <div className="full-bleed section-warm" style={{ padding: "var(--section-gap) 0" }}>
+        <div className="container">
+          <div className="section-header">
+            <h2>{t("核心價值", "核心价值", "Core Values")}</h2>
+            <span className="gold-line" />
+          </div>
           <div className="values-grid">
             <div className="value-item">
               <h3>{t("獨立透明", "独立透明", "Independence & Transparency")}</h3>
@@ -123,22 +125,23 @@ export default async function About({ params }: { params: { locale: string } }) 
       </div>
 
       {/* FAQ */}
-      <div className="section-lg">
-        <h2 style={{ marginTop: 0 }}>
-          {t("常見問題", "常见问题", "Frequently Asked Questions")}
-        </h2>
+      <div className="container section-lg">
+        <div className="section-header">
+          <h2>{t("常見問題", "常见问题", "Frequently Asked Questions")}</h2>
+          <span className="gold-line" />
+        </div>
         <div className="grid-2" style={{ marginTop: 16 }}>
           <div className="card">
             <h3>{t("基金會收費嗎？", "基金会收费吗？", "Does the Foundation charge any fees?")}</h3>
-            <p className="muted">{dict.banner.noFees}</p>
+            <p className="text-secondary">{dict.banner.noFees}</p>
           </div>
           <div className="card">
             <h3>{t("官方網站是什麼？", "官方网站是什么？", "What is the official website?")}</h3>
-            <p className="muted">{dict.banner.domain}</p>
+            <p className="text-secondary">{dict.banner.domain}</p>
           </div>
           <div className="card">
             <h3>{t("如何參與？", "如何参与？", "How can I participate?")}</h3>
-            <p className="muted">
+            <p className="text-secondary">
               {t(
                 "\u60A8\u53EF\u4EE5\u6295\u7A3F\u56DE\u61B6\u3001\u53C3\u8207\u53E3\u8FF0\u6B77\u53F2\u8A08\u756B\uFF0C\u6216\u5411\u8CC7\u6599\u5EAB\u63D0\u4F9B\u5B78\u8853\u8CC7\u6599\u3002\u8A73\u898B\u300C\u53C3\u8207\u300D\u9801\u9762\u3002",
                 "\u60A8\u53EF\u4EE5\u6295\u7A3F\u56DE\u5FC6\u3001\u53C2\u4E0E\u53E3\u8FF0\u5386\u53F2\u8BA1\u5212\uFF0C\u6216\u5411\u8D44\u6599\u5E93\u63D0\u4F9B\u5B66\u672F\u8D44\u6599\u3002\u8BE6\u89C1\u201C\u53C2\u4E0E\u201D\u9875\u9762\u3002",
@@ -148,7 +151,7 @@ export default async function About({ params }: { params: { locale: string } }) 
           </div>
           <div className="card">
             <h3>{t("基金會是否提供資助？", "基金会是否提供资助？", "Does the Foundation provide funding?")}</h3>
-            <p className="muted">
+            <p className="text-secondary">
               {t(
                 "基金會目前不提供任何形式的資助或補助。如遇以本基金會名義索取款項者，請提高警覺。",
                 "基金会目前不提供任何形式的资助或补助。如遇以本基金会名义索取款项者，请提高警觉。",

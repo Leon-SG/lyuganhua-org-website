@@ -18,7 +18,7 @@ export default async function Legacy({ params }: { params: { locale: string } })
     <div>
       {/* Hero */}
       <div
-        className="page-hero"
+        className="full-bleed page-hero"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80')",
@@ -31,7 +31,7 @@ export default async function Legacy({ params }: { params: { locale: string } })
       </div>
 
       {/* Memorial Quote */}
-      <div className="section-lg">
+      <div className="container section-lg">
         <blockquote style={{ maxWidth: 800, margin: "0 auto" }}>
           <p>
             {t(
@@ -44,14 +44,15 @@ export default async function Legacy({ params }: { params: { locale: string } })
       </div>
 
       {/* Tributes */}
-      <div className="section">
-        <h2 style={{ marginTop: 0, marginBottom: 24 }}>
-          {t("追思與致敬", "追思与致敬", "Tributes & Remembrance")}
-        </h2>
+      <div className="container section-lg">
+        <div className="section-header">
+          <h2>{t("追思與致敬", "追思与致敬", "Tributes & Remembrance")}</h2>
+          <span className="gold-line" />
+        </div>
         <div className="grid-2">
           <article className="card">
             <h3>{t("同事追憶", "同事追忆", "A Colleague's Remembrance")}</h3>
-            <p className="muted">
+            <p className="text-secondary">
               {t(
                 "呂醫生是我共事多年的搭檔，他的耐心、細心和對病人的關懷令所有人動容。每一次會診，他都如同對待家人般傾心投入。（占位文字）",
                 "吕医生是我共事多年的搭档，他的耐心、细心和对病人的关怀令所有人动容。每一次会诊，他都如同对待家人般倾心投入。（占位文字）",
@@ -61,7 +62,7 @@ export default async function Legacy({ params }: { params: { locale: string } })
           </article>
           <article className="card">
             <h3>{t("學生感言", "学生感言", "A Student's Testimony")}</h3>
-            <p className="muted">
+            <p className="text-secondary">
               {t(
                 "呂老師不僅教給我們醫學知識，更以身作則教會我們如何做一個有溫度的醫者。他的教誨將伴隨我的整個職業生涯。（占位文字）",
                 "吕老师不仅教给我们医学知识，更以身作则教会我们如何做一个有温度的医者。他的教诲将伴随我的整个职业生涯。（占位文字）",
@@ -71,7 +72,7 @@ export default async function Legacy({ params }: { params: { locale: string } })
           </article>
           <article className="card">
             <h3>{t("患者心聲", "患者心声", "A Patient's Voice")}</h3>
-            <p className="muted">
+            <p className="text-secondary">
               {t(
                 "\u5442\u91AB\u751F\u7E3D\u662F\u8010\u5FC3\u50BE\u807D\uFF0C\u8B93\u6211\u5728\u75C5\u75DB\u4E2D\u611F\u5230\u88AB\u5C0A\u91CD\u548C\u5B89\u5FC3\u3002\u4ED6\u4E0D\u50C5\u6CBB\u7642\u8EAB\u9AD4\uFF0C\u66F4\u6EAB\u6696\u4E86\u5FC3\u9748\u3002\uFF08\u5360\u4F4D\u6587\u5B57\uFF09",
                 "\u5415\u533B\u751F\u603B\u662F\u8010\u5FC3\u503E\u542C\uFF0C\u8BA9\u6211\u5728\u75C5\u75DB\u4E2D\u611F\u5230\u88AB\u5C0A\u91CD\u548C\u5B89\u5FC3\u3002\u4ED6\u4E0D\u4EC5\u6CBB\u7597\u8EAB\u4F53\uFF0C\u66F4\u6E29\u6696\u4E86\u5FC3\u7075\u3002\uFF08\u5360\u4F4D\u6587\u5B57\uFF09",
@@ -81,7 +82,7 @@ export default async function Legacy({ params }: { params: { locale: string } })
           </article>
           <article className="card">
             <h3>{t("\u91AB\u5B78\u50B3\u627F", "\u533B\u5B66\u4F20\u627F", "Medical Heritage")}</h3>
-            <p className="muted">
+            <p className="text-secondary">
               {t(
                 "\u5442\u91AB\u751F\u7684\u81E8\u5E8A\u7D93\u9A57\u548C\u6559\u5B78\u65B9\u6CD5\u5DF2\u88AB\u591A\u4F4D\u5F8C\u8F29\u50B3\u627F\uFF0C\u5728\u65B0\u4E00\u4EE3\u91AB\u8005\u4E2D\u7E7C\u7E8C\u7572\u653E\u5149\u8292\u3002\uFF08\u5360\u4F4D\u6587\u5B57\uFF09",
                 "\u5415\u533B\u751F\u7684\u4E34\u5E8A\u7ECF\u9A8C\u548C\u6559\u5B66\u65B9\u6CD5\u5DF2\u88AB\u591A\u4F4D\u540E\u8F88\u4F20\u627F\uFF0C\u5728\u65B0\u4E00\u4EE3\u533B\u8005\u4E2D\u7EE7\u7EED\u7EFD\u653E\u5149\u8292\u3002\uFF08\u5360\u4F4D\u6587\u5B57\uFF09",
@@ -93,11 +94,12 @@ export default async function Legacy({ params }: { params: { locale: string } })
       </div>
 
       {/* Photo Gallery */}
-      <div className="section-alt-bg">
-        <div className="section-alt-inner">
-          <h2 style={{ marginTop: 0, textAlign: "center", marginBottom: 32 }}>
-            {t("影像紀事", "影像纪事", "Photo Gallery")}
-          </h2>
+      <div className="full-bleed section-cool">
+        <div className="container">
+          <div className="section-header">
+            <h2>{t("影像紀事", "影像纪事", "Photo Gallery")}</h2>
+            <span className="gold-line" />
+          </div>
           <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 16 }}>
             <div className="media-placeholder">
               {t("臨床教學", "临床教学", "Clinical teaching")}
@@ -112,7 +114,7 @@ export default async function Legacy({ params }: { params: { locale: string } })
               {t("師生合影", "师生合影", "Faculty & students")}
             </div>
           </div>
-          <p className="muted" style={{ textAlign: "center", marginTop: 16 }}>
+          <p className="text-secondary" style={{ textAlign: "center", marginTop: 16 }}>
             {t(
               "更多照片將持續更新。歡迎投稿珍貴影像。",
               "更多照片将持续更新。欢迎投稿珍贵影像。",
@@ -123,7 +125,7 @@ export default async function Legacy({ params }: { params: { locale: string } })
       </div>
 
       {/* Values & Principles */}
-      <div className="section-lg">
+      <div className="container section-lg">
         <div className="grid-2">
           <article className="card">
             <h3>{t("價值與原則", "价值与原则", "Values & Principles")}</h3>
@@ -175,7 +177,7 @@ export default async function Legacy({ params }: { params: { locale: string } })
 
       {/* Contribute CTA */}
       <div
-        className="cta-banner"
+        className="full-bleed cta-banner"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80')",
@@ -190,7 +192,7 @@ export default async function Legacy({ params }: { params: { locale: string } })
               "Share memories, photos, or audio/video. No fees of any kind."
             )}
           </p>
-          <Link className="cta-outline" href={`/${locale}/participate` as any}>
+          <Link className="btn btn-outline" href={`/${locale}/participate` as any}>
             {t("提交回憶", "提交回忆", "Submit a Memory")}
           </Link>
         </div>

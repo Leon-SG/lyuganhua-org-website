@@ -36,7 +36,7 @@ export default async function Life({ params }: { params: { locale: string } }) {
     <div>
       {/* Hero */}
       <div
-        className="page-hero"
+        className="full-bleed page-hero"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920&q=80')",
@@ -49,7 +49,7 @@ export default async function Life({ params }: { params: { locale: string } }) {
       </div>
 
       {/* Intro */}
-      <div className="section-lg">
+      <div className="container section-lg">
         <p style={{ maxWidth: 720, margin: "0 auto", textAlign: "center", fontSize: "1.1rem", color: "var(--muted)" }}>
           {t(
             "以下時間軸記錄了呂干華醫生一生的重要里程碑——從早年成長，到醫學教育、臨床實踐、學術研究，直至其影響深遠的社區服務與精神傳承。",
@@ -60,7 +60,7 @@ export default async function Life({ params }: { params: { locale: string } }) {
       </div>
 
       {/* Timeline */}
-      <div className="section">
+      <div className="container section-lg">
         {Object.keys(groups).sort().map((k) => (
           <div key={k} style={{ marginBottom: 28 }}>
             <h2 style={{ margin: "0 0 12px" }}>{decadeLabel(parseInt(k, 10))}</h2>
@@ -77,7 +77,7 @@ export default async function Life({ params }: { params: { locale: string } }) {
       </div>
 
       {/* Note */}
-      <div className="section">
+      <div className="container section-lg">
         <blockquote style={{ maxWidth: 720, margin: "0 auto" }}>
           <p>
             {t(
