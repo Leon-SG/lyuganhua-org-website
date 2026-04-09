@@ -150,4 +150,41 @@ blockquote p{margin:0;font-style:italic;font-size:1.15rem;line-height:1.7}
 .page-hero{min-height:220px}.page-hero h1{font-size:1.8rem}.page-hero-content{padding:40px 24px}
 .focus-grid,.stories-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr);gap:20px}.stat-item .stat-number{font-size:2.2rem}
 .footer-top,.footer-main{grid-template-columns:1fr;gap:28px;padding:40px 24px 28px}.footer-bottom{flex-direction:column;gap:8px;text-align:center}}
+/* Smooth fade-in for page sections */
+@keyframes fadeInUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+.section-lg,.section,.container.section-lg{animation:fadeInUp .5s ease-out}
+
+/* Focus indicators for accessibility */
+a:focus-visible,.btn:focus-visible,.cta:focus-visible,.nav a:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.card:focus-within{box-shadow:0 0 0 3px var(--gold-light)}
+
+/* Smooth image loading placeholder */
+.hero-banner,.page-hero,.cta-banner,.focus-card-img{background-color:var(--bg-dark)}
+
+/* Enhanced card interactions */
+.card{transition:box-shadow .2s,transform .2s}.card:hover{transform:translateY(-2px)}
+.value-item{transition:box-shadow .2s,transform .2s}.value-item:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+
+/* Stat number animation-ready */
+.stat-item .stat-number{transition:transform .3s ease}.stat-item:hover .stat-number{transform:scale(1.05)}
+
+/* Button icon arrows */
+.btn-ghost::after{content:" \2192";transition:margin-left .2s}.btn-ghost:hover::after{margin-left:4px}
+
+/* Subtle parallax on hero (reduced motion respects) */
+@media(prefers-reduced-motion:no-preference){
+  .hero-banner{background-attachment:fixed}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-banner,.page-hero,.cta-banner{background-attachment:scroll}
+  .section-lg,.section,.container.section-lg{animation:none}
+  .header-marquee-strip{animation:none}
+}
+
+/* Selection color */
+::selection{background:var(--brand-light);color:var(--brand)}
+
+/* Scrollbar styling (webkit) */
+::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:var(--bg-cool)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}::-webkit-scrollbar-thumb:hover{background:var(--text-muted)}
+
 @media print{.site-header,.site-footer,.footer,.utility-bar,.hero-banner,.page-hero,.cta-banner{display:none}.full-bleed{width:auto;left:auto;margin-left:0}.card{break-inside:avoid;border:1px solid #ccc}}
